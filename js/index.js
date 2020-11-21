@@ -50,7 +50,7 @@ window.onload = () => {
         check = true;
     })(navigator.userAgent || navigator.vendor || window.opera);
     const aref = document.getElementById('btn-ws')
-    check ? aref.setAttribute('href', "https://api.whatsapp.com/send?phone=+549112451-6103") : aref.setAttribute('href', "https://web.whatsapp.com/send?phone=+549112451-6103")
+    check ? aref.setAttribute('href', "https://api.whatsapp.com/send?phone=+5491151553310") : aref.setAttribute('href', "https://web.whatsapp.com/send?phone=+5491151553310")
 }
 
   
