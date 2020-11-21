@@ -816,7 +816,7 @@ body {
     width: 85%;
   }
   .servicios {
-    width: 100%;
+    width: none;
     gap: 10px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
