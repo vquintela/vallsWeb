@@ -825,6 +825,9 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .servicios-title-columnas .servicios-title-column-1 {
+    width: 100%;
+  }
   .servicios-title-columnas .servicios-title-column-1 p {
     width: 100%;
   }
