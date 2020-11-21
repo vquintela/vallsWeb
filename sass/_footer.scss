@@ -1,0 +1,135 @@
+.redes-title {
+    text-align: center;
+    h3 {
+        color: $verde;
+    }
+}
+
+.redes {
+    width: 100%;
+    height: 80px;
+    background-color: $verde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        text-decoration: none;
+        i {
+            color: white;
+            margin: 10px;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+.ubicacion {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 50px solid $verde;
+    .ubicacion-dir {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        h2, h4 {
+            text-transform: uppercase;
+        }
+        h2 {
+            color: $verde;
+        }
+        h4 {
+            margin-bottom: 0;
+        }
+        p {
+            margin: 0;
+        }
+        i {
+            font-size: 3.5rem;
+            margin-top: 20px;
+        }
+    }
+    .ubicacion-mapa {
+        max-width: 500px;
+        iframe {
+            width: 500px;
+            height: 100%;
+        }
+    }
+}
+
+.telefonos {
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .telefonos-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 3rem;
+            margin-right: 15px;
+            color: $verde;
+        }
+        h3 {
+            color: $verde;
+        }
+    }
+}
+
+.zocalo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: $grisFuerte;
+    h3 {
+        margin: 0 10px;
+        color: white;
+    }
+}
+
+.derechos {
+    h4 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:850px){
+    .ubicacion {
+        width: 100%;
+        .ubicacion-dir {
+            width: 40%;
+        }
+        .ubicacion-mapa {
+            width: 60%;
+            iframe {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    .ubicacion {
+        flex-direction: column;
+        .ubicacion-dir,
+        .ubicacion-mapa {
+            padding: 10px 0;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .telefonos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        height: auto;
+        padding: 20px 0px;
+    }
+    .zocalo {
+        h3 {
+            font-size: 0.8rem;
+        }
+    }
+}
