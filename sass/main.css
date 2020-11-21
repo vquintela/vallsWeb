@@ -816,15 +816,14 @@ body {
     width: 85%;
   }
   .servicios {
+    width: 100%;
+    gap: 10px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
   .servicios-title-columnas {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .servicios-title-columnas .servicios-title-column-1 {
-    width: 90%;
   }
   .servicios-title-columnas .servicios-title-column-1 p {
     width: 100%;
