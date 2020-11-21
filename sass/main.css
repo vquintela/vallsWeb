@@ -871,10 +871,6 @@ body {
         flex-wrap: wrap;
     width: 100%;
   }
-  .servicios {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .somos-masthead,
