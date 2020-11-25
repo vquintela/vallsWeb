@@ -261,16 +261,29 @@
             max-width: 80%;
         }
     }
+    .servicios-title-columnas {
+        h3 {
+            font-size: 0.8rem;
+        }
+    }
+    .servicios {
+        .servicios-col {
+            h3 {
+                font-size: 0.8rem;
+            }
+        }
+    }
     .servicios-title-1,
     .servicios-title-2,
     .servicios-title2-1,
     .servicios-title2-2 {
         width: 100%;
+        height: auto;
+        font-size: 0.8rem;
     }
-    .servicios-title-2 {
-        font-size: 0.9rem;
-    }
+    .servicios-title2-1::before,
     .servicios-title2-2::before,
+    .servicios-title-1::after,
     .servicios-title-2::after {
         display: none;
     }

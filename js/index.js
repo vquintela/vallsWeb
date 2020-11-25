@@ -1,6 +1,6 @@
 // BTN RESPONSIVE NAVBAR
 document.getElementById("btn-menu").addEventListener("click", () => {
-    document.getElementById("nav-navbar").classList.toggle("show");
+    document.getElementById("navegacion").classList.toggle("show");
 });
 
 // SLIDER
