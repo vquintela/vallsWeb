@@ -214,6 +214,18 @@
                 color: $verde;
                 margin-bottom: 0;
             }
+            .boton-cerrar-drop {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                p {
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    background-color: $verde;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+            }
         }
         .menu-dolor-show {
             overflow: hidden;

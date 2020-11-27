@@ -38,7 +38,6 @@ btnPatologias.forEach(element => {
             e.classList.replace('fa-chevron-down', 'fa-chevron-right');
             e.parentElement.nextElementSibling.getElementsByClassName('patologias-texto-contenido')[0].classList.remove('menu-dolor-show');
         }); 
-        // document.querySelectorAll('.pato-sub').forEach(e => e.classList.remove('menu-dolor-show'));
     });
 });
 
@@ -52,5 +51,20 @@ btnSub.forEach(element => {
             e.target.classList.replace('fa-chevron-down', 'fa-chevron-right');
         }
         e.target.parentElement.nextElementSibling.getElementsByClassName('patologias-texto-contenido')[0].classList.toggle('menu-dolor-show');
+    });
+});
+
+// BOTONES CERRAR DROPDOWN
+const btnCerrar = document.querySelectorAll('.boton-cerrar-drop');
+btnCerrar.forEach(element => {
+    element.addEventListener('click', e => {
+        e.target.parentElement.parentElement.classList.remove('menu-dolor-show');
+        if(e.target.parentElement.classList.contains('dolor')) {
+            e.target.parentElement.parentElement.parentElement.previousElementSibling.getElementsByClassName('fas')[0].classList.replace('fa-chevron-down', 'fa-plus');
+            location.href = '#dolor';
+        } else {
+            e.target.parentElement.parentElement.parentElement.previousElementSibling.getElementsByClassName('fas')[0].classList.replace('fa-chevron-down', 'fa-chevron-right')
+            location.href = '#patologias';
+        }
     });
 });
