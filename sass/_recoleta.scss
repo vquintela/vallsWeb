@@ -39,7 +39,7 @@
         .col-recoleta-text {
             background-color: $grisClaro;
             width: 100%;
-            height: 90px;
+            height: 110px;
             h3 {
                 text-transform: uppercase;
                 margin-bottom: 0;
@@ -55,7 +55,7 @@
             i {
                 float: right;
                 margin-right: 10px;
-                margin-top: -5px;
+                margin-top: 10px;
                 color: $verde;
                 background-color: $blancoGris;
                 padding: 5px;
@@ -63,13 +63,15 @@
             }
         }
         p,
-        &:last-child p,
-        &:first-child p {
+        &:last-child p {
             font-weight: lighter;
             text-align: justify;
             line-height: 1.5rem;
             letter-spacing: 0.05rem;
             font-size: 0.8rem;
+        }
+        .text-mute {
+            opacity: 0.6;
         }
     }
     .col-recoleta-extension {
@@ -135,6 +137,164 @@
     }
 }
 
+// SECCION DEFINA SU DOLOR
+.recoleta-dolor-portada {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $verde;
+    .dolor-portada-img {
+        width: 25%;
+        img {
+            max-width: 100%;
+        }
+    }
+    h1 {
+        margin: 0;
+        margin-left: 80px;
+        text-transform: uppercase;
+    }
+}
+
+.recoleta-dolor-portada::after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: rgb(247, 247, 234);
+    bottom: 0;
+    left: 0;
+}
+
+.recoleta-dolor-contenido,
+.patologias-contenido {
+    max-width: 850px;
+    margin: 30px auto;
+    .dolor-navegacion,
+    .patologia-navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $grisClaro;
+        padding: 0 20px;
+        border-bottom: 1px solid white;
+        h3 {
+            font-weight: lighter;
+            margin: 10px 0;
+        }
+        i {
+            color: $verde;
+            background-color: white;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    .dolor-texto-contenedor,
+    .patologias-texto {
+        overflow: hidden;
+        .dolor-texto,
+        .patologias-texto-contenido {
+            display: none;
+            animation: movi 1s;
+            padding: 0 20px;
+            background-color: white;
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 15px 0;
+                font-weight: lighter;
+                text-align: justify;
+                line-height: 1.5rem;
+                letter-spacing: 0.05rem;
+                font-size: 0.8rem;
+            }
+            h3 {
+                color: $verde;
+                margin-bottom: 0;
+            }
+        }
+        .menu-dolor-show {
+            overflow: hidden;
+            display: block;
+        }
+        @keyframes movi {
+            0% {
+                transform: translateY(-101%);
+            }
+        }
+    }
+}
+
+// PATOLOGIAS
+.patologias-contenido {
+    .patologia-navegacion {
+        h3 {
+            text-transform: uppercase;
+        }
+        z-index: 5555;
+    }
+    .patologias-contenedor-item {
+        overflow: hidden;
+        .patologias-subcont-item {
+            display: none;
+            animation: movis 1s;
+            .patologia-item-contenido {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                border-bottom: 1px solid white;
+                background-color: $verdeClaro;
+                color: white;
+                p {
+                    margin: 0;
+                    padding: 10px 0;
+                }
+                i {
+                    color: $verde;
+                    background-color: white;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .menu-pato-show {
+            overflow: hidden;
+            display: block;
+        }
+        @keyframes movis {
+            0% {
+                transform: translateY(-101%);
+            }
+        }
+    }
+}
+
+.patologias-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+        width: 100px;
+        transform: translateX(20%);
+    }
+    h4 {
+        padding: 15px 15px 15px 60px;
+        text-transform: uppercase;
+        background-color: $verde;
+        color: white;
+        i {
+            margin-left: 20px;
+            background-color: white;
+            color: $verde;
+            padding: 5px;
+        }
+    }
+}
+
 @media screen and (max-width:850px){
     .contenedor-servicios-recoleta {
         grid-template-columns: repeat(2, 250px);
@@ -145,10 +305,22 @@
     .contenedor-servicios-recoleta {
         grid-template-columns: repeat(1, 250px);
     }
+    .recoleta-dolor-portada {
+        h1 {
+            font-size: 1.2rem;
+            margin-left: 5px;
+        }
+    }
 }
 
 @media screen and (max-width:450px){
     .contenedor-servicios-recoleta {
         grid-template-columns: repeat(1, 90%);
+    }
+    .patologias-title {
+        h4 {
+            padding: 15px 15px 15px 30px;
+            font-size: 0.9rem;
+        }
     }
 }

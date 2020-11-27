@@ -1177,7 +1177,7 @@ body {
 .contenedor-servicios-recoleta .servicios-col-recoleta .col-recoleta-text {
   background-color: #cccccc;
   width: 100%;
-  height: 90px;
+  height: 110px;
 }
 
 .contenedor-servicios-recoleta .servicios-col-recoleta .col-recoleta-text h3 {
@@ -1197,7 +1197,7 @@ body {
 .contenedor-servicios-recoleta .servicios-col-recoleta .col-recoleta-text i {
   float: right;
   margin-right: 10px;
-  margin-top: -5px;
+  margin-top: 10px;
   color: #669933;
   background-color: #f7f7ea;
   padding: 5px;
@@ -1205,13 +1205,16 @@ body {
 }
 
 .contenedor-servicios-recoleta .servicios-col-recoleta p,
-.contenedor-servicios-recoleta .servicios-col-recoleta:last-child p,
-.contenedor-servicios-recoleta .servicios-col-recoleta:first-child p {
+.contenedor-servicios-recoleta .servicios-col-recoleta:last-child p {
   font-weight: lighter;
   text-align: justify;
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
   font-size: 0.8rem;
+}
+
+.contenedor-servicios-recoleta .servicios-col-recoleta .text-mute {
+  opacity: 0.6;
 }
 
 .contenedor-servicios-recoleta .col-recoleta-extension {
@@ -1304,6 +1307,257 @@ body {
   }
 }
 
+.recoleta-dolor-portada {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #669933;
+}
+
+.recoleta-dolor-portada .dolor-portada-img {
+  width: 25%;
+}
+
+.recoleta-dolor-portada .dolor-portada-img img {
+  max-width: 100%;
+}
+
+.recoleta-dolor-portada h1 {
+  margin: 0;
+  margin-left: 80px;
+  text-transform: uppercase;
+}
+
+.recoleta-dolor-portada::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 100%;
+  background-color: #f7f7ea;
+  bottom: 0;
+  left: 0;
+}
+
+.recoleta-dolor-contenido,
+.patologias-contenido {
+  max-width: 850px;
+  margin: 30px auto;
+}
+
+.recoleta-dolor-contenido .dolor-navegacion,
+.recoleta-dolor-contenido .patologia-navegacion,
+.patologias-contenido .dolor-navegacion,
+.patologias-contenido .patologia-navegacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #cccccc;
+  padding: 0 20px;
+  border-bottom: 1px solid white;
+}
+
+.recoleta-dolor-contenido .dolor-navegacion h3,
+.recoleta-dolor-contenido .patologia-navegacion h3,
+.patologias-contenido .dolor-navegacion h3,
+.patologias-contenido .patologia-navegacion h3 {
+  font-weight: lighter;
+  margin: 10px 0;
+}
+
+.recoleta-dolor-contenido .dolor-navegacion i,
+.recoleta-dolor-contenido .patologia-navegacion i,
+.patologias-contenido .dolor-navegacion i,
+.patologias-contenido .patologia-navegacion i {
+  color: #669933;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor,
+.recoleta-dolor-contenido .patologias-texto,
+.patologias-contenido .dolor-texto-contenedor,
+.patologias-contenido .patologias-texto {
+  overflow: hidden;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido,
+.patologias-contenido .patologias-texto .dolor-texto,
+.patologias-contenido .patologias-texto .patologias-texto-contenido {
+  display: none;
+  -webkit-animation: movi 1s;
+          animation: movi 1s;
+  padding: 0 20px;
+  background-color: white;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto p,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido p,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto p,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido p,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto p,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido p,
+.patologias-contenido .patologias-texto .dolor-texto p,
+.patologias-contenido .patologias-texto .patologias-texto-contenido p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px 0;
+  font-weight: lighter;
+  text-align: justify;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-size: 0.8rem;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto h3,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido h3,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto h3,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido h3,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto h3,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido h3,
+.patologias-contenido .patologias-texto .dolor-texto h3,
+.patologias-contenido .patologias-texto .patologias-texto-contenido h3 {
+  color: #669933;
+  margin-bottom: 0;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor .menu-dolor-show,
+.recoleta-dolor-contenido .patologias-texto .menu-dolor-show,
+.patologias-contenido .dolor-texto-contenedor .menu-dolor-show,
+.patologias-contenido .patologias-texto .menu-dolor-show {
+  overflow: hidden;
+  display: block;
+}
+
+@-webkit-keyframes movi {
+  0% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+
+@keyframes movi {
+  0% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+
+.patologias-contenido .patologia-navegacion {
+  z-index: 5555;
+}
+
+.patologias-contenido .patologia-navegacion h3 {
+  text-transform: uppercase;
+}
+
+.patologias-contenido .patologias-contenedor-item {
+  overflow: hidden;
+}
+
+.patologias-contenido .patologias-contenedor-item .patologias-subcont-item {
+  display: none;
+  -webkit-animation: movis 1s;
+          animation: movis 1s;
+}
+
+.patologias-contenido .patologias-contenedor-item .patologias-subcont-item .patologia-item-contenido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid white;
+  background-color: #99cc99;
+  color: white;
+}
+
+.patologias-contenido .patologias-contenedor-item .patologias-subcont-item .patologia-item-contenido p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.patologias-contenido .patologias-contenedor-item .patologias-subcont-item .patologia-item-contenido i {
+  color: #669933;
+  background-color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.patologias-contenido .patologias-contenedor-item .menu-pato-show {
+  overflow: hidden;
+  display: block;
+}
+
+@-webkit-keyframes movis {
+  0% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+
+@keyframes movis {
+  0% {
+    -webkit-transform: translateY(-101%);
+            transform: translateY(-101%);
+  }
+}
+
+.patologias-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.patologias-title img {
+  width: 100px;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.patologias-title h4 {
+  padding: 15px 15px 15px 60px;
+  text-transform: uppercase;
+  background-color: #669933;
+  color: white;
+}
+
+.patologias-title h4 i {
+  margin-left: 20px;
+  background-color: white;
+  color: #669933;
+  padding: 5px;
+}
+
 @media screen and (max-width: 850px) {
   .contenedor-servicios-recoleta {
     -ms-grid-columns: (250px)[2];
@@ -1316,12 +1570,20 @@ body {
     -ms-grid-columns: (250px)[1];
         grid-template-columns: repeat(1, 250px);
   }
+  .recoleta-dolor-portada h1 {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .contenedor-servicios-recoleta {
     -ms-grid-columns: (90%)[1];
         grid-template-columns: repeat(1, 90%);
+  }
+  .patologias-title h4 {
+    padding: 15px 15px 15px 30px;
+    font-size: 0.9rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
