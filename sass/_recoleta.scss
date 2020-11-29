@@ -226,6 +226,13 @@
                     margin-bottom: 20px;
                 }
             }
+            .img-contenedor-contenido {
+                display: flex;
+                align-items: center;
+                p {
+                    padding-left: 10px;
+                }
+            }
         }
         .menu-dolor-show {
             overflow: hidden;

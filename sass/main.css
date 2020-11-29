@@ -1472,6 +1472,33 @@ body {
   margin-bottom: 20px;
 }
 
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto .img-contenedor-contenido,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido,
+.patologias-contenido .patologias-texto .dolor-texto .img-contenedor-contenido,
+.patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido p,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido p,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto .img-contenedor-contenido p,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido p,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido p,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido p,
+.patologias-contenido .patologias-texto .dolor-texto .img-contenedor-contenido p,
+.patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido p {
+  padding-left: 10px;
+}
+
 .recoleta-dolor-contenido .dolor-texto-contenedor .menu-dolor-show,
 .recoleta-dolor-contenido .patologias-texto .menu-dolor-show,
 .patologias-contenido .dolor-texto-contenedor .menu-dolor-show,
