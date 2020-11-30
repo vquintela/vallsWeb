@@ -1679,17 +1679,25 @@ body {
     -ms-grid-columns: (150px)[3];
         grid-template-columns: repeat(3, 150px);
   }
-  .img-contenedor-texto {
+  .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .img-contenedor-contenido {
+  .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido p, .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido h3 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto p, .patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto h3 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
