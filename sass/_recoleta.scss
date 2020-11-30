@@ -232,6 +232,12 @@
                 p {
                     padding-left: 10px;
                 }
+                .img-contenedor-texto {
+                    p, h3 {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
             }
         }
         .menu-dolor-show {
@@ -257,8 +263,6 @@
     .patologias-contenedor-item {
         overflow: hidden;
         .patologias-subcont-item {
-            display: none;
-            animation: movis 1s;
             .patologia-item-contenido {
                 display: flex;
                 justify-content: space-between;
@@ -277,15 +281,6 @@
                     padding: 5px;
                     cursor: pointer;
                 }
-            }
-        }
-        .menu-pato-show {
-            overflow: hidden;
-            display: block;
-        }
-        @keyframes movis {
-            0% {
-                transform: translateY(-101%);
             }
         }
     }
@@ -314,9 +309,56 @@
     }
 }
 
+.patologias-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    .patologias-grid-item {
+        overflow: hidden;
+        position: relative;
+        height: 137px;
+        .grid-text {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(102, 153, 51, 0.6);
+            transform: translateY(101%);
+            transition: transform 0.5s;
+            p {
+                text-transform: uppercase;
+                color: white;
+            }
+        }
+        &:hover {
+            .grid-text {
+                transform: translateY(0);
+            }
+        }
+        img {
+            position: absolute;
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width:850px){
     .contenedor-servicios-recoleta {
         grid-template-columns: repeat(2, 250px);
+    }
+    .patologias-grid {
+        grid-template-columns: repeat(3, 150px);
+    }
+    .img-contenedor-texto {
+        flex-direction: column;
+    }
+    .img-contenedor-contenido {
+        flex-direction: column;
     }
 }
 
@@ -340,6 +382,14 @@
         h4 {
             padding: 15px 15px 15px 30px;
             font-size: 0.9rem;
+        }
+    }
+    .patologias-grid {
+        grid-template-columns: repeat(2, 130px);
+        gap: 2%;
+        margin-bottom: 160px;
+        .patologias-grid-item {
+            height: 120px;
         }
     }
 }

@@ -1499,6 +1499,25 @@ body {
   padding-left: 10px;
 }
 
+.recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido .img-contenedor-texto p, .recoleta-dolor-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido .img-contenedor-texto h3,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto p,
+.recoleta-dolor-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto h3,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto .img-contenedor-contenido .img-contenedor-texto p,
+.recoleta-dolor-contenido .patologias-texto .dolor-texto .img-contenedor-contenido .img-contenedor-texto h3,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto p,
+.recoleta-dolor-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto h3,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido .img-contenedor-texto p,
+.patologias-contenido .dolor-texto-contenedor .dolor-texto .img-contenedor-contenido .img-contenedor-texto h3,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto p,
+.patologias-contenido .dolor-texto-contenedor .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto h3,
+.patologias-contenido .patologias-texto .dolor-texto .img-contenedor-contenido .img-contenedor-texto p,
+.patologias-contenido .patologias-texto .dolor-texto .img-contenedor-contenido .img-contenedor-texto h3,
+.patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto p,
+.patologias-contenido .patologias-texto .patologias-texto-contenido .img-contenedor-contenido .img-contenedor-texto h3 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .recoleta-dolor-contenido .dolor-texto-contenedor .menu-dolor-show,
 .recoleta-dolor-contenido .patologias-texto .menu-dolor-show,
 .patologias-contenido .dolor-texto-contenedor .menu-dolor-show,
@@ -1533,12 +1552,6 @@ body {
   overflow: hidden;
 }
 
-.patologias-contenido .patologias-contenedor-item .patologias-subcont-item {
-  display: none;
-  -webkit-animation: movis 1s;
-          animation: movis 1s;
-}
-
 .patologias-contenido .patologias-contenedor-item .patologias-subcont-item .patologia-item-contenido {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1565,25 +1578,6 @@ body {
   background-color: white;
   padding: 5px;
   cursor: pointer;
-}
-
-.patologias-contenido .patologias-contenedor-item .menu-pato-show {
-  overflow: hidden;
-  display: block;
-}
-
-@-webkit-keyframes movis {
-  0% {
-    -webkit-transform: translateY(-101%);
-            transform: translateY(-101%);
-  }
-}
-
-@keyframes movis {
-  0% {
-    -webkit-transform: translateY(-101%);
-            transform: translateY(-101%);
-  }
 }
 
 .patologias-title {
@@ -1619,10 +1613,83 @@ body {
   padding: 5px;
 }
 
+.patologias-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[5];
+      grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.patologias-grid .patologias-grid-item {
+  overflow: hidden;
+  position: relative;
+  height: 137px;
+}
+
+.patologias-grid .patologias-grid-item .grid-text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(102, 153, 51, 0.6);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.patologias-grid .patologias-grid-item .grid-text p {
+  text-transform: uppercase;
+  color: white;
+}
+
+.patologias-grid .patologias-grid-item:hover .grid-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.patologias-grid .patologias-grid-item img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 850px) {
   .contenedor-servicios-recoleta {
     -ms-grid-columns: (250px)[2];
         grid-template-columns: repeat(2, 250px);
+  }
+  .patologias-grid {
+    -ms-grid-columns: (150px)[3];
+        grid-template-columns: repeat(3, 150px);
+  }
+  .img-contenedor-texto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .img-contenedor-contenido {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1645,6 +1712,15 @@ body {
   .patologias-title h4 {
     padding: 15px 15px 15px 30px;
     font-size: 0.9rem;
+  }
+  .patologias-grid {
+    -ms-grid-columns: (130px)[2];
+        grid-template-columns: repeat(2, 130px);
+    gap: 2%;
+    margin-bottom: 160px;
+  }
+  .patologias-grid .patologias-grid-item {
+    height: 120px;
   }
 }
 /*# sourceMappingURL=main.css.map */
