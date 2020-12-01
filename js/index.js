@@ -49,8 +49,18 @@ window.onload = () => {
       )
         check = true;
     })(navigator.userAgent || navigator.vendor || window.opera);
-    const aref = document.getElementById('btn-ws')
-    check ? aref.setAttribute('href', "https://api.whatsapp.com/send?phone=+5491151553310") : aref.setAttribute('href', "https://web.whatsapp.com/send?phone=+5491151553310")
+    const aref = document.getElementById('btn-ws');
+    const btnScanner = document.getElementById('btn-scanner');
+    const btnPrp = document.getElementById('btn-prp');
+    if (check) {
+        aref.setAttribute('href', "https://api.whatsapp.com/send?phone=+549116947-7355");
+        if(btnScanner) btnScanner.setAttribute('href', "https://api.whatsapp.com/send?phone=+549114196-6570");
+        if(btnPrp) btnPrp.setAttribute('href', "https://api.whatsapp.com/send?phone=+549115476-7469");
+    } else {
+        aref.setAttribute('href', "https://web.whatsapp.com/send?phone=+549116947-7355");
+        if(btnScanner) btnScanner.setAttribute('href', "https://web.whatsapp.com/send?phone=+549114196-6570");
+        if(btnPrp) btnPrp.setAttribute('href', "https://web.whatsapp.com/send?phone=+549115476-7469");
+    }
 }
 
   
