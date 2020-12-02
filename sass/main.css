@@ -36,7 +36,7 @@ body {
   display: flex;
   background-color: white;
   width: 100%;
-  z-index: 999999999999;
+  z-index: 180;
 }
 
 .nav-img {
@@ -119,18 +119,15 @@ body {
   margin-top: 20px;
 }
 
-.navegacion .icon-item a {
-  text-decoration: none;
+.navegacion .icon-item i {
   background-color: black;
   padding: 8px;
   margin-left: 10px;
   border-radius: 50%;
   width: 17px;
   height: 17px;
-}
-
-.navegacion .icon-item i {
   color: white;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
@@ -378,7 +375,7 @@ body {
 
 .icon-wtsp2 {
   position: fixed;
-  z-index: 15000000000000000;
+  z-index: 150;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,7 +528,7 @@ body {
           justify-content: center;
   position: absolute;
   bottom: 0px;
-  z-index: 1500;
+  z-index: 110;
 }
 
 .slider-nav {
@@ -1705,12 +1702,12 @@ body {
   text-align: center;
 }
 
-.prp-titulo h5 {
+.prp-titulo h3 {
   text-transform: uppercase;
   color: #669933;
 }
 
-.prp-titulo h2 {
+.prp-titulo h1 {
   text-transform: uppercase;
 }
 
@@ -1736,7 +1733,7 @@ body {
   background-color: #669933;
 }
 
-.prp-logo-wts .prp-logo-cont .cont-text h3 {
+.prp-logo-wts .prp-logo-cont .cont-text h2 {
   margin: 8px;
   text-transform: uppercase;
   color: white;
@@ -1744,7 +1741,7 @@ body {
 
 .prp-logo-wts .prp-logo-cont .cont-img {
   position: absolute;
-  top: -7px;
+  top: -5px;
   left: -25px;
 }
 
@@ -1773,7 +1770,7 @@ body {
 }
 
 .prp-logo-wts .prp-logo-cont .cont-wts h4, .prp-logo-wts .prp-logo-cont .cont-wts p {
-  margin: 0;
+  margin: 4px;
   color: white;
 }
 
@@ -1806,11 +1803,11 @@ body {
 
 .prp-logo-contenedor .prp-logo img {
   width: 100px;
+  margin-right: 10px;
 }
 
 .prp-logo-contenedor .prp-logo h3 {
   text-transform: uppercase;
-  font-weight: lighter;
   text-align: center;
 }
 
@@ -1872,6 +1869,12 @@ body {
 .prp-contenido .prp-col-2 video,
 .prp-contenido .prp-col-3 video {
   max-width: 100%;
+}
+
+.prp-contenido .prp-col-1 h3,
+.prp-contenido .prp-col-2 h3,
+.prp-contenido .prp-col-3 h3 {
+  font-weight: 100;
 }
 
 @media screen and (max-width: 950px) {
@@ -1958,17 +1961,195 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  .prp-titulo {
+    margin-bottom: 100px;
+  }
   .prp-logo-wts {
     width: 100%;
   }
+  .prp-logo-wts .prp-logo-cont {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .prp-logo-wts .prp-logo-cont .cont-img {
     left: 0;
+  }
+  .prp-logo-wts .prp-logo-cont .cont-text {
+    width: 80%;
+  }
+  .prp-logo-wts .prp-logo-cont .cont-wts {
+    padding-right: 10px;
+  }
+  .prp-logo-wts .prp-logo-cont .cont-wts img {
+    margin: 0;
   }
   .prp-logo-wts .prp-logo-cont .cont-wts .cont-wts-text {
     font-size: 0.7rem;
   }
   .prp-logo-contenedor .prp-logo {
     width: 80%;
+  }
+  .prp-logo-contenedor .prp-logo::before {
+    width: 80%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 300;
+}
+
+.modal .modal-contenido {
+  border-radius: 10px;
+  -webkit-animation: modal 1s;
+          animation: modal 1s;
+  position: fixed;
+  top: 15vh;
+  left: 10vw;
+  right: 10vw;
+  margin: auto;
+  font-family: 'futura';
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  max-width: 450px;
+}
+
+.modal .modal-contenido .modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-contenido .modal-title img {
+  width: 150px;
+}
+
+.modal .modal-contenido .modal-title span {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.modal .modal-contenido .modal-title span:hover, .modal .modal-contenido .modal-title span:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal .modal-contenido .modal-body {
+  text-align: center;
+}
+
+.modal .modal-contenido .modal-body h3 {
+  text-transform: capitalize;
+}
+
+.modal .modal-contenido .modal-body p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.modal .modal-contenido .modal-body form {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.modal .modal-contenido .modal-body form .input-form {
+  margin: 15px;
+}
+
+.modal .modal-contenido .modal-body form .input-form input,
+.modal .modal-contenido .modal-body form .input-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #669933;
+  font-weight: 100;
+}
+
+.modal .modal-contenido .modal-body form .input-form textarea {
+  resize: none;
+}
+
+.modal .modal-contenido .modal-body form .input-form input::-webkit-input-placeholder {
+  color: #000;
+  font-weight: 100;
+  opacity: 0.6;
+}
+
+.modal .modal-contenido .modal-body form .input-form input:-ms-input-placeholder {
+  color: #000;
+  font-weight: 100;
+  opacity: 0.6;
+}
+
+.modal .modal-contenido .modal-body form .input-form input::-ms-input-placeholder {
+  color: #000;
+  font-weight: 100;
+  opacity: 0.6;
+}
+
+.modal .modal-contenido .modal-body form .input-form input::placeholder {
+  color: #000;
+  font-weight: 100;
+  opacity: 0.6;
+}
+
+.modal .modal-contenido .modal-body form .input-form input:focus,
+.modal .modal-contenido .modal-body form .input-form textarea:focus {
+  outline: none;
+}
+
+.modal .modal-contenido .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+}
+
+.modal .modal-contenido .modal-footer button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  padding: 8px 35px;
+  background-color: #669933;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes modal {
+  0% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+}
+
+@keyframes modal {
+  0% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
   }
 }
 /*# sourceMappingURL=main.css.map */

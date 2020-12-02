@@ -14,6 +14,76 @@
     <title>Centro Valls</title>
 </head>
 <body>
+    <!-- MODAL REDES -->
+    <div class="modal" id="modal-redes">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="">
+                <span id="cerrarModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>compartir en redes sociales</h3>
+                <p>¡Gracias por compartir!</p>
+            </div>
+            <div class="modal-footer">
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <script type="IN/Share" data-url="http://www.centrovalls.com"></script>
+                <iframe
+                    src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.centrovalls.com%2F&layout=button&size=small&width=89&height=20&appId"
+                    width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL EMAIL -->
+    <div class="modal" id="modal-email">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="">
+                <span id="cerrarModalEmail">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-form">
+                        <input type="text" id="nombre" placeholder="Nombre">
+                        <span id="errorNombre"></span>
+                    </div>
+                    <div class="input-form">
+                        <input type="number" id="celular" placeholder="Celular">
+                        <span id="errorTelefono"></span>
+                    </div>
+                    <div class="input-form">
+                        <input type="email" id="correo" placeholder="Correo">
+                        <span id="errorEmail"></span>
+                    </div>
+                    <div class="input-form">
+                        <textarea id="mensaje" placeholder="Mensaje"></textarea>
+                        <span id="errorComentario"></span>
+                    </div>
+                </form>     
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="consulta">Consultar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Ventana Modal Email Confirmacion -->
+    <div id="modal-confirm" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="lg">
+            </div>
+            <div class="modal-body">
+                <h3>Consulta Enviada Correctamente</h3>
+                <p>En breve nos comunicaremos con usted</p>
+                <p>¡Muchas Gracias!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="aceptarEditarButton">Aceptar</button>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <nav class="nav">
         <div class="menu-btn" id="btn-menu">
@@ -41,10 +111,10 @@
             </div>
             <div class="nav-icon">
                 <div class="icon-item">
-                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <i class="fas fa-envelope form-contacto"></i>
                 </div>
-                <div class="icon-item">
-                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                <div class="icon-item compartir-redes">
+                    <i class="fas fa-share-alt"></i>
                 </div>
             </div>
         </div>
@@ -71,12 +141,18 @@
     <!-- CUERPO DEL SITIO -->
     <!-- MASTHEAD -->
     <div class="masthead-recoleta">
-        <img src="img/3.jpg" alt="">
+        <picture>
+            <source srcset="img/3-450.png" media="(max-width: 450px)">
+            <source srcset="img/3-800.png" media="(max-width: 850px)">
+            <source srcset="img/prpPortada.jpg">
+            <img loading="lazy" src="img/prpPortada.jpg" alt="imagen por defecto" />
+        </picture>
+        <!-- <img src="img/prpPortada.jpg"> -->
     </div>
     <!-- TITLE -->
     <div class="prp-titulo">
-        <h5>centro integral de traumatología y cirugía deportiva</h5>
-        <h2>nuestros servicios</h2>
+        <h3>centro integral de traumatología y cirugía deportiva</h3>
+        <h1>nuestros servicios</h1>
     </div>
     <!-- CONTENIDO -->
     <div class="prp-logo-wts">
@@ -85,14 +161,14 @@
                 <img src="img/prp.png" alt="">
             </div>
             <div class="cont-text">
-                <h3>turnos</h3>
+                <h2>turnos</h2>
             </div>
             <a href="#" id="btn-prp">
                 <div class="cont-wts">
                     <img src="img/wtsnegro.png" alt="">
                     <div class="cont-wts-text">
                         <h4>informes y turnos</h4>
-                        <p>dra candy orella</p>
+                        <p>dra patricia matas</p>
                     </div>
                 </div>
             </a>
@@ -106,6 +182,7 @@
             <video controls>
                 <source src="video/vlcconvert.mp4" type="video/mp4">
             </video>
+            <h3>PRP (Plasma Rico en Proteinas)</h3>
         </div>
         <div class="prp-col-3">
             <img src="img/prp-06.png" alt="">

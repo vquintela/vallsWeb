@@ -14,6 +14,76 @@
     <title>Centro Valls</title>
 </head>
 <body>
+    <!-- MODAL REDES -->
+    <div class="modal" id="modal-redes">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="">
+                <span id="cerrarModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h3>compartir en redes sociales</h3>
+                <p>¡Gracias por compartir!</p>
+            </div>
+            <div class="modal-footer">
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <script type="IN/Share" data-url="http://www.centrovalls.com"></script>
+                <iframe
+                    src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.centrovalls.com%2F&layout=button&size=small&width=89&height=20&appId"
+                    width="89" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL EMAIL -->
+    <div class="modal" id="modal-email">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="">
+                <span id="cerrarModalEmail">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-form">
+                        <input type="text" id="nombre" placeholder="Nombre">
+                        <span id="errorNombre"></span>
+                    </div>
+                    <div class="input-form">
+                        <input type="number" id="celular" placeholder="Celular">
+                        <span id="errorTelefono"></span>
+                    </div>
+                    <div class="input-form">
+                        <input type="email" id="correo" placeholder="Correo">
+                        <span id="errorEmail"></span>
+                    </div>
+                    <div class="input-form">
+                        <textarea id="mensaje" placeholder="Mensaje"></textarea>
+                        <span id="errorComentario"></span>
+                    </div>
+                </form>     
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="consulta">Consultar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Ventana Modal Email Confirmacion -->
+    <div id="modal-confirm" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-title">
+                <img src="img/logoColor.png" alt="lg">
+            </div>
+            <div class="modal-body">
+                <h3>Consulta Enviada Correctamente</h3>
+                <p>En breve nos comunicaremos con usted</p>
+                <p>¡Muchas Gracias!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="aceptarEditarButton">Aceptar</button>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <nav class="nav">
         <div class="menu-btn" id="btn-menu">
@@ -41,10 +111,10 @@
             </div>
             <div class="nav-icon">
                 <div class="icon-item">
-                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <i class="fas fa-envelope form-contacto"></i>
                 </div>
-                <div class="icon-item">
-                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                <div class="icon-item compartir-redes">
+                    <i class="fas fa-share-alt"></i>
                 </div>
             </div>
         </div>
@@ -545,13 +615,31 @@
             </div>
         </div>
         <div class="dolor-navegacion">
-            <h3>Dolor agudo</h3>
+            <h3>Dolor cronico</h3>
             <i class="fas fa-plus btn-dolor"></i>
         </div>
         <div class="dolor-texto-contenedor">
             <div class="dolor-texto">
                 <p>
-
+                    Casi todo el mundo siente dolor de vez en cuando. Cuando haces esfuerzos con la espalda, el dolor es la
+                    forma en que tu cuerpo te dice que algo no está andando bien. Luego, una vez que sana, el dolor se detiene.
+                    El dolor crónico es diferente. Tu cuerpo sigue doliendo semanas, meses o incluso años después de la lesión.
+                    Los médicos suelen definir el dolor crónico como cualquier dolor que dura de 3 a 6 meses o más y puede
+                    afectar negativamente la vida diaria y la salud mental.
+                </p>
+                <p>
+                    El dolor crónico puede surgir de una lesión inicial o de una causa continua, como una enfermedad. Es
+                    posible que tampoco haya una causa clara, pero el dolor simplemente no desaparece. Otros problemas de
+                    salud como fatiga, incapacidad para dormir durante la noche, pérdida de apetito y cambios de humor a
+                    menudo acompañan al dolor crónico. El dolor crónico también puede limitar el movimiento, lo que puede
+                    reducirla flexibilidad, la fuerza y la resistencia.
+                </p>
+                <p>
+                    Si comienza a sufrir de dolor crónico, es fundamental que busque ayuda médica especializada y obtenga un
+                    diagnóstico adecuado. Nuestros médicos en el lugar trabajarán con usted para identificar las causas y
+                    síntomas de su dolor y brindarle tratamientos y estrategias de manejo efectivos para ayudarlo a mantener
+                    su calidad devida, recuperando la actividad física y sus deportes favoritos que abandono antes por sus
+                    dolores .
                 </p>
                 <div class="boton-cerrar-drop dolor">
                     <p>
@@ -568,7 +656,17 @@
         <div class="dolor-texto-contenedor">
             <div class="dolor-texto">
                 <p>
-
+                    No se puede negar el hecho de que las lesiones relacionadas con el deporte
+                    están aumentando en nuestra época. ¿Por qué? Porque somos más activos
+                    que nunca: participando en deportes de mayor nivel.
+                </p>
+                <p>
+                    Cuando se trata de lesiones, los deportistas no son los únicos"en riesgo". Los
+                    adultos a veces sobreestiman sus habilidades para "jugar como solían
+                    hacerlo" en su juventud y se esfuerzan hasta el punto de lesionarse. Ya sea que
+                    sea un amateur de fin de semana, un entusiasta de la caminata, un atleta
+                    aficionado o de élite, o si tiene un hijo que practica deportes juveniles,
+                    probablemente esté familiarizado con las lesiones deportivas.
                 </p>
                 <div class="boton-cerrar-drop dolor">
                     <p>
