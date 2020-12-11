@@ -1010,6 +1010,13 @@ body {
   width: 20%;
 }
 
+.somos-experiencia .exp-col-3 h4,
+.somos-experiencia .trayectoria-contenido-col2 h4,
+.trayectoria-contenido .exp-col-3 h4,
+.trayectoria-contenido .trayectoria-contenido-col2 h4 {
+  margin: 0;
+}
+
 .somos-experiencia .exp-col-3 video,
 .somos-experiencia .trayectoria-contenido-col2 video,
 .trayectoria-contenido .exp-col-3 video,
@@ -1857,12 +1864,11 @@ body {
 .prp-contenido .prp-col-1 p,
 .prp-contenido .prp-col-2 p,
 .prp-contenido .prp-col-3 p {
+  margin-top: 0;
   font-weight: lighter;
   text-align: justify;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   letter-spacing: 0.05rem;
-  font-size: 0.8rem;
-  margin: 0;
 }
 
 .prp-contenido .prp-col-1 video,
