@@ -66,6 +66,7 @@ window.onload = () => {
 // BOTON REDES Y COMPARTIR
 document.querySelector('.compartir-redes').addEventListener('click', () => mostrarModalRedes());
 document.querySelector('.form-contacto').addEventListener('click', () => mostrarModalContacto());
+document.querySelector('#contacto-zocalo').addEventListener('click', () => mostrarModalContacto());
 
 const mostrarModalRedes = () => {
     const modal = document.getElementById('modal-redes')
@@ -170,4 +171,18 @@ const enviarEmail = () => {
         location.reload();
       });
     }
+}
+
+// MODAL AVISO LEGAL
+document.querySelector('#legal-modal').addEventListener('click', () => modalLegal());
+
+const modalLegal = () => {
+    const modal = document.getElementById('modal-legal');
+    const barra = document.querySelector('body');
+    modal.style.display = 'block';
+    barra.style.overflowY = 'hidden';
+    document.getElementById('cerrarModalLegal').addEventListener('click', () => {
+        modal.style.display = 'none';
+        barra.style.overflowY = 'visible';
+    });
 }

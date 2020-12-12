@@ -326,6 +326,11 @@ body {
 .zocalo h3 {
   margin: 0 10px;
   color: white;
+  cursor: pointer;
+}
+
+.zocalo h3:first-child {
+  cursor: none;
 }
 
 .derechos h4 {
@@ -2017,7 +2022,7 @@ body {
   -webkit-animation: modal 1s;
           animation: modal 1s;
   position: fixed;
-  top: 15vh;
+  top: 5vh;
   left: 10vw;
   right: 10vw;
   margin: auto;
@@ -2120,6 +2125,12 @@ body {
   outline: none;
 }
 
+.modal .modal-contenido .modal-body .aviso-legal {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  text-align: justify;
+}
+
 .modal .modal-contenido .modal-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2156,6 +2167,12 @@ body {
   0% {
     -webkit-transform: translateY(-150%);
             transform: translateY(-150%);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .modal .modal-contenido .modal-body .aviso-legal {
+    font-size: 0.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
