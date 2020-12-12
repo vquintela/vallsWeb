@@ -24,23 +24,6 @@ botonesDolor.forEach(element => {
     });
 });
 
-// BOTONES PATOLOGIAS
-// const btnPatologias = document.querySelectorAll('.btn-patologias');
-// btnPatologias.forEach(element => {
-//     element.addEventListener('click', e => {
-//         if(e.target.classList.contains('fa-plus')) {
-//             e.target.classList.replace('fa-plus', 'fa-chevron-down');
-//         } else {
-//             e.target.classList.replace('fa-chevron-down', 'fa-plus');
-//         }
-//         e.target.parentElement.nextElementSibling.getElementsByClassName('patologias-subcont-item')[0].classList.toggle('menu-pato-show');
-//         document.querySelectorAll('.pato-sub').forEach(e => {
-//             e.classList.replace('fa-chevron-down', 'fa-chevron-right');
-//             e.parentElement.nextElementSibling.getElementsByClassName('patologias-texto-contenido')[0].classList.remove('menu-dolor-show');
-//         }); 
-//     });
-// });
-
 // BOTONES PATOLOGIAS SUBCATEGORIAS
 const btnSub = document.querySelectorAll('.pato-sub');
 btnSub.forEach(element => {
@@ -67,4 +50,9 @@ btnCerrar.forEach(element => {
             location.href = '#patologias';
         }
     });
+});
+
+// LINK
+document.querySelector('.especialista-link').addEventListener('click', () => {
+    location.href = `#dolor`
 });

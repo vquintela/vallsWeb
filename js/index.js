@@ -186,3 +186,30 @@ const modalLegal = () => {
         barra.style.overflowY = 'visible';
     });
 }
+
+// LINKS
+const prp = document.querySelectorAll('.prp-link');
+if (prp) prp.forEach(element => {
+    element.addEventListener('click', () => {
+        location.href = `/prp.html#prp`
+    })
+});
+
+const recoleta = document.querySelectorAll('.recoleta-link');
+if (recoleta) recoleta.forEach(element => {
+    element.addEventListener('click', () => {
+        location.href = `/recoleta.html#recoleta`
+    })
+});
+
+const recoleta2 = document.querySelectorAll('.recoleta-link-2');
+if (recoleta2) recoleta2.forEach(element => {
+    element.addEventListener('click', () => {
+        location.href = `/recoleta.html#recoleta2`
+    })
+});
+
+const especialista = document.querySelector('.especialista-link');
+if (especialista) especialista.addEventListener('click', () => {
+    location.href = `/recoleta.html#dolor`
+});

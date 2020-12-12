@@ -745,6 +745,13 @@ body {
   gap: 30px;
 }
 
+.prp-link,
+.recoleta-link,
+.recoleta-link-2,
+.especialista-link {
+  cursor: pointer;
+}
+
 .servicios-col {
   text-align: center;
 }
@@ -1707,6 +1714,10 @@ body {
   }
 }
 
+.masthead-prp {
+  height: 40vh;
+}
+
 .prp-titulo {
   margin: 50px 0;
   width: 100%;
@@ -1736,29 +1747,35 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .prp-logo-wts .prp-logo-cont .cont-text {
   width: 90%;
   text-align: center;
   background-color: #669933;
-}
-
-.prp-logo-wts .prp-logo-cont .cont-text h2 {
-  margin: 8px;
-  text-transform: uppercase;
-  color: white;
+  height: 43px;
 }
 
 .prp-logo-wts .prp-logo-cont .cont-img {
   position: absolute;
   top: -5px;
   left: -25px;
+  text-align: center;
 }
 
 .prp-logo-wts .prp-logo-cont .cont-img img {
   width: 100px;
+}
+
+.prp-logo-wts .prp-logo-cont .cont-img h3 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.prp-logo-wts .prp-logo-cont .cont-img p {
+  font-weight: lighter;
+  margin-top: 0;
 }
 
 .prp-logo-wts .prp-logo-cont .cont-wts {
@@ -1931,16 +1948,6 @@ body {
 }
 
 @media screen and (max-width: 650px) {
-  .prp-logo-wts {
-    width: 90%;
-  }
-  .prp-logo-wts .prp-logo-cont .cont-text {
-    width: 100%;
-  }
-  .prp-logo-wts .prp-logo-cont .cont-wts {
-    right: 0;
-    top: 100%;
-  }
   .prp-contenido {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
@@ -1991,6 +1998,8 @@ body {
   }
   .prp-logo-wts .prp-logo-cont .cont-wts {
     padding-right: 10px;
+    right: 10px;
+    top: 2px;
   }
   .prp-logo-wts .prp-logo-cont .cont-wts img {
     margin: 0;

@@ -129,6 +129,12 @@
     grid-template-columns: repeat(3, 20%);
     gap: 30px;
 }
+.prp-link,
+.recoleta-link,
+.recoleta-link-2,
+.especialista-link {
+    cursor: pointer;
+}
 
 .servicios-col {
     img {
